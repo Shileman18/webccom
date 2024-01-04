@@ -31,7 +31,7 @@ function Signup() {
       <div className="container d-flex justify-content-center vh-100 align-items-center">
         <div className="row">
           <div className="col">
-            <div className="card" style={{width:"400px"}}>
+            <div className="card" style={{ width: "400px" }}>
               <div className="card-body">
                 <div className="card-title text-center">
                   <h1 className="mb-4 mt-2"> SIGNUP </h1>
@@ -41,13 +41,11 @@ function Signup() {
                   <input
                     onChange={(e) => {
                       setEmail(e.target.value);
-                     
                     }}
                     value={email}
                     className="form-control mb-4"
                     type="email"
                   />
-           
                   Password
                   <input
                     onChange={(e) => {
@@ -57,17 +55,18 @@ function Signup() {
                     className="form-control mb-4"
                     type="password"
                   />
-            
-                 <div className="d-grid">
-                 <button onClick={handleSubmit} className="btn btn-primary btn-lg mb-4">
-                    SUBMIT
-                  </button>
-                 </div>
-                <div className=" text-center mt-4">
-
-            
-                 <span className=" text-muted">Already Have Account?</span>   <Link to={"/SignIn"} >    SIGN IN  </Link>
-                 </div>
+                  <div className="d-grid">
+                    <button
+                      onClick={handleSubmit}
+                      className="btn btn-primary btn-lg mb-4"
+                    >
+                      SUBMIT
+                    </button>
+                  </div>
+                  <div className=" text-center mt-4">
+                    <span className=" text-muted">Already Have Account?</span>{" "}
+                    <Link to={"/SignIn"}> SIGN IN </Link>
+                  </div>
                 </div>
               </div>
             </div>

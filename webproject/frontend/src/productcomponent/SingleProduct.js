@@ -58,7 +58,7 @@ console.log(product)
                   <h2>{product.title}</h2><hr/>
                 </div>
                 <p>{product.description}</p><hr/>
-                <p>Price: ${product.price}</p><hr/>
+                <p>Price: ${product.price}.00</p><hr/>
                 <p>Quantity Available: {product.quantity}</p>
                 <button onClick={handleAddToCart}    >Add to Cart</button>
               </div>

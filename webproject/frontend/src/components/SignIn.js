@@ -25,7 +25,7 @@ function Signin() {
         }
         if (res.data.code === 200) {
           // move to home
-          navigate("/Home");
+          navigate("/");
           localStorage.setItem("TOKEN", res.data.token);
           localStorage.setItem("EMAIL", res.data.email);
         }

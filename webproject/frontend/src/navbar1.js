@@ -31,7 +31,7 @@ const Navbar1 = () => {
     
     </Navbar>
     </div>
-    <div className='container-fluid bg-success '>
+    <div className='container-fluid bg-light '>
     <Navbar collapseOnSelect expand="lg" className="">
 
         <Navbar.Collapse id="responsive-navbar-nav">

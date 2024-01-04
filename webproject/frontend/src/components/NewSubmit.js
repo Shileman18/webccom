@@ -10,7 +10,7 @@ function NewSubmit() {
   const handleSubmit = () => {
     console.log(otp, password);
     axios
-      .post("http://localhost:3002/api/newuser/submit-otp", {
+      .post("http://localhost:3002/api/newuser/submitotp", {
         otp: otp,
         password: password,
       })
@@ -30,33 +30,43 @@ function NewSubmit() {
 
   return (
     <>
-      <h1 className="center"> FORGET PASSWORD </h1>
+      <div className="container d-flex justify-content-center vh-100 align-items-center">
+        <div className="row">
+          <div className="col">
+            <div className="card ">
+              <div className="card-body">
+                <h1 className="center"> FORGET PASSWORD </h1>
 
-      <div className="outcard">
-        OTP
-        <input
-          style={{ marginBottom: "15px" }}
-          onChange={(e) => {
-            setOtp(e.target.value);
-          }}
-          value={otp}
-          className="inputs"
-          type="text"
-        />
-        New Password
-        <input
-          style={{ marginBottom: "20px" }}
-          value={password}
-          onChange={(e) => {
-            setPassword(e.target.value);
-          }}
-          className="inputs"
-          type="text"
-        />
-        <button onClick={handleSubmit} className="btns">
-          {" "}
-          CHANGE PASSWORD{" "}
-        </button>
+                <div className="outcard  form-group">
+                  OTP
+                  <input
+                    style={{ marginBottom: "15px" }}
+                    onChange={(e) => {
+                      setOtp(e.target.value);
+                    }}
+                    value={otp}
+                    className="inputs form-control"
+                    type="text"
+                  />
+                  New Password
+                  <input
+                    style={{ marginBottom: "20px" }}
+                    value={password}
+                    onChange={(e) => {
+                      setPassword(e.target.value);
+                    }}
+                    className="inputs form-control"
+                    type="text"
+                  />
+                  <button onClick={handleSubmit} className="btns form-control">
+                    {" "}
+                    CHANGE PASSWORD{" "}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

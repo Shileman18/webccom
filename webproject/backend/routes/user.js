@@ -4,9 +4,9 @@ const router = express.Router();
 const formidable=require("express-formidable")
 // const verifyToken=require("../middlewares/authontication.js");
 
-router.post('/signup',formidable(), signup)
-router.post('/signin',formidable(),  signin)
-router.post('/submitotp', formidable(), submitotp)
-router.post('/sendotp',formidable(),  sendotp)
+router.post('/signup', signup)
+router.post('/signin', signin)
+router.post('/submitotp', submitotp)
+router.post('/sendotp', sendotp)
 
 module.exports = router;

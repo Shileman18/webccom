@@ -1,12 +1,11 @@
 const UserModel = require('../model/user')
 const nodemailer = require('nodemailer')
 
-const signup = (req, res) => {
+const signup = async(req, res) => {
     console.log(req.body)
-
     // email should not exist alreday
 
-    const newuser = new UserModel({
+    const newuser =await UserModel.create({
         email: req.body.email,
         password: req.body.password
     });
@@ -29,7 +28,7 @@ const signin = (req, res) => {
             console.log(result, '11')
 
             // match password with req.body.password
-            if (result.password !== req.body.password) {
+            if (!(result.password == req.body.password) ){
                 res.send({ code: 404, message: 'password wrong' })
             } else {
                 res.send({

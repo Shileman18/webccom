@@ -53,17 +53,17 @@ const Shopeur = () => {
 
           <div className="nav-link  d-flex align-items-center justify-content-center ">
    
-              <VscAccount className="border fs-1 bg-light " />
+              <VscAccount className=" fs-1  " />
         
        
           
-              <p className="fs-5 ms-3">sign in</p>
+              <p className="fs-5 ms-3"><Link to="/signin">sign in</Link></p>
 
      
           </div>
        
           <div className="nav-link d-flex align-items-center justify-content-center">
-            <BsCart4 className="fs-1 border bg-light" />
+            <BsCart4 className="fs-1" />
 
             <Link to="/cart" className="ms-3 fs-5">
               My Cart
