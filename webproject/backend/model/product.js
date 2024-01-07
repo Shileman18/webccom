@@ -36,7 +36,7 @@ totalPrice: {
     type: Number,
     default: 0,
   },
-  images: {
+  imageURL: {
     type: String,
     
   },

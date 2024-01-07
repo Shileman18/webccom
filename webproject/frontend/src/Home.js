@@ -9,12 +9,13 @@ import Themeextimg from "./card2";
 import LatestNews from "./latestNews";
 import Scrollcards from "./scrollcards";
 import Footer from "./footer";
-import { ProductList } from "./productcomponent/ProductList";
+import  ProductList  from "./productcomponent/ProductList";
 import TopCategory from "./topCategory";
-
+// import HorizontalCarousel from "./slider/slide";
 function Home() {
   return (
     <>
+    {/* <HorizontalCarousel/> */}
       <Navbar1 />
       <Shopeur />
       <Navbar2 />

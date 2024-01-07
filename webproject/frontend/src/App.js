@@ -7,7 +7,7 @@ import Home from './Home';
 import ForgetPassword from './components/ForgetPassword';
 import NewSubmit from './components/NewSubmit';
 import ProductDisplay from "./productcomponent/SingleProduct";
-import { ProductList } from "./productcomponent/ProductList";
+import  ProductList  from "./productcomponent/ProductList";
 import Cart from './cart/Cart';
 import Contact from './contect/contact';
 import Features from './features/features';

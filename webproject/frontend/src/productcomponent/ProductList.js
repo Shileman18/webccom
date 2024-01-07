@@ -1,66 +1,101 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { Link } from "react-router-dom";
-import { FaRegStar } from "react-icons/fa";
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
+import { Link } from 'react-router-dom'
+// import './cartslider.css'
+// import './home.css'
+// import SubNav2 from '../navbar/secnavbar'
+// import Thirdbar from '../navbar/navbar'
+import { HiMiniAdjustmentsVertical } from "react-icons/hi2";
+
+import { FaAngleRight,FaAngleLeft,FaEye  } from "react-icons/fa";
+import { CiShoppingBasket ,CiHeart } from "react-icons/ci";
+import '../productcomponent/slider.css'
+
+function ProductList() {
 
 
-export const ProductList = () => {
-  const [products, setproducts] = useState([]);
-  useEffect(() => {
-    const getproducts = async () => {
-      try {
-        const response = await axios.get(
-          "http://localhost:3002/api/product/getProducts"
-        );
-        const data = await response.data;
-        setproducts(data);
-      } catch (error) {
-        console.log(error);
-      }
+    const [products, setproducts] = useState([]);
+    const [currentIndex, setCurrentIndex] = useState(10);
+    useEffect(() => {
+        const getproducts = async () => {
+            try {
+                const response = await axios.get(
+                    'http://localhost:3002/api/product/getproducts'
+                );
+                const data = await response.data;
+                setproducts(data);
+
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        getproducts();
+    }, [])
+    const handleNext = () => {
+        setCurrentIndex((prevIndex) => (prevIndex + 2) % products.length);
     };
-    getproducts();
-  }, [products]);
 
-  console.log(products);
+    const handlePrev = () => {
+        setCurrentIndex(
+            (prevIndex) => (prevIndex - 2 + products.length) % products.length
+        );
+    };
 
-  return (
-    <>
-      <div className="container ">
-        <div className="d-flex">
-          <h2 className="col-3">LATEST PRODUCT </h2>
-          <hr className="col-8" />
-        </div>
-        <div className="row  mt-3 mb-3 d-flex ">
-          {products.map((value, index) => (
-            <div className="col-3" key={index}>
-       
-              <div className=" mb-3">
-                <Link
-                  to={`products/${value._id}`}
-                  style={{ textDecoration: "none", color: "black" }}
-                >
-                  <img
-                    src="/images/laptop/27-300x298.jpg"
-                    className=""
-                    alt="gggg"
-                  />
+    return (
+        <>
+            {/* <SubNav2 />
+            <Thirdbar /> */}
+            <div className='container'>
+                <div className="card-slider">
+                    <div className="card-container">
 
-                  <p className="text-center text-warning">
-                    <FaRegStar />
-                    <FaRegStar />
-                    <FaRegStar />
-                    <FaRegStar />
-                  </p>
-                  <h6  className="text-center">{value.title}</h6>
+                        {products.slice(currentIndex, currentIndex + 4).map((item, index) => (
 
-                  <p className="text-center">$ {value.price}.00</p>
-                  {/* <p className=" text-center">{value.description}</p> */}
-                </Link>
-              </div>
+
+                            <div key={index} className='col-sm-3 col-lg-3 my-3 fs-6'>
+                                <div className='card' style={{ margin: "3px" }}>
+
+                                    <Link to={`products/${item._id}`} style={{textDecoration:"none"}}>
+                                        <img src={item.imageURL} alt={item.id}  />
+                                        <div className='card-title' style={{ color: "black", textDecoration: "none" }}>
+                                            <div className='card-body'>
+                                                <h4 class="card-text text-truncate" style={{ color: "black", textDecoration: "none" }}>{item.title}</h4>
+                                                <div >
+                                                    <p style={{ color: "black", textDecoration: "none" }}>price: $ {item.price}.00</p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </Link>
+                                    <div className="icons-container ">
+                                        <span className="icon border text-center rounded  " style={{width:"40px",height:"40px"}}><a className='fs-4 icon-a' href='/'><CiShoppingBasket /></a></span>
+                                        <span className="icon border text-center rounded  " style={{width:"40px",height:"40px"}}><a className='fs-4 icon-a'href='/'><CiHeart /></a></span>
+                                        <span className="icon border text-center rounded  " style={{width:"40px",height:"40px"}}><a className='fs-4 icon-a'href='/'><HiMiniAdjustmentsVertical /></a></span>
+                                        <span className="icon border text-center rounded  " style={{width:"40px",height:"40px"}}><a className='fs-4 icon-a'href='/'><FaEye /></a></span>
+
+                                       
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        ))}
+
+                        <button className="prev" onClick={handlePrev}><FaAngleLeft /> </button>
+                        <button className="next" onClick={handleNext}><FaAngleRight /></button>
+
+                        {/* </Slider> */}
+                    </div>
+                </div>
             </div>
-          ))}
-        </div>
-      </div>
-    </>
-  );
-};
+
+        </>
+
+
+
+    )
+}
+
+
+
+export default ProductList

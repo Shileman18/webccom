@@ -49,7 +49,7 @@ export const FeatureProduct = () => {
                         />
                       </div>
                       <div className="col ">
-                        <p className="text-center">
+                        <p className="text-center text-warning">
                           <FaRegStar />
                           <FaRegStar />
                           <FaRegStar />

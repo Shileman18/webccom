@@ -3,25 +3,45 @@ const Product = require("../model/product");
 const User = require("../model/regUser");
 
 
-const createProduct =async (req, res) => {
-    const {productId,title,description,price,category,quantity } = req.body;
+// const createProduct =async (req, res) => {
+//     const {productId,title,description,price,category,quantity } = req.body;
 
-    if (!(productId && title &&  description && price&& category && quantity  )) {
-      res.status(400).send("provide valid input");
-    } else {
-      let newProduct = await Product.create({
-        productId:productId,
-        title: title,
+//     if (!(productId && title &&  description && price&& category && quantity  )) {
+//       res.status(400).send("provide valid input");
+//     } else {
+//       let newProduct = await Product.create({
+//         productId:productId,
+//         title: title,
       
-        description:description,
-        price: price,
-        category:category,
-        quantity:quantity,
-      });
+//         description:description,
+//         imageURL:imageURL,
+//         price: price,
+//         category:category,
+//         quantity:quantity,
+//       });
   
-      res.status(201).send(newProduct)
+//       res.status(201).send(newProduct)
+//     }
+//   }
+
+
+  const createProduct=async(req,res)=>{
+    try {
+        const product=await Product.create(req.body)
+        res.json(product)
+    } catch (error) {
+        throw new Error(error);
     }
-  }
+    }
+
+
+
+
+
+
+
+
+
 
 // Endpoint for image upload
 // router.post('/upload', upload.single('image'),
