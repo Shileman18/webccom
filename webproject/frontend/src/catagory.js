@@ -34,9 +34,9 @@ function Catagory() {
     <div>
       <div className="container mt-4">
         <div className="row">
-          <div className="col-md-3">
-            <div className="card">
-              <div className="bg-warning d-flex justify-content-around align-items-center">
+          <div className="col-md-3 ">
+            <div className="card ">
+              <div className="bg-warning d-flex justify-content-around  align-items-center">
                 <i className="fa fa-bars  ms-0"></i>
                 <p className="fw-bolder mt-3 me-5 ">ALL CATEGORY</p>
               </div>
@@ -168,11 +168,11 @@ function Catagory() {
                     <Typography className="col-12">
                       <div className="card-body">
                         <p className="ps-4 pe-4 ms-5 me-5">
-                          {" "}
+                      
                           <span>Avionics</span>
                         </p>
                         <p className="ps-4 pe-4 ms-5 me-5">
-                          {" "}
+                      
                           <span>Avionics</span>
                         </p>
                       </div>

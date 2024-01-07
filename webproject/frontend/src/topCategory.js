@@ -15,7 +15,7 @@ const TopCategory = () => {
     slidesToShow: 4,
     slidesToScroll: 1,
     infinite: true,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 1000,
   };
 
@@ -45,17 +45,17 @@ const TopCategory = () => {
         <hr className="col-8 "/>
         </div>
         <div className="row">
-        {/* <Slider {...settings}> */}
+        <Slider {...settings}>
           {catogary.map((value, index) => (
             <div  key={index}>
              {/* '/images/2-2-360x400_t.jpg' */}
               <div className="card me-4 img-body mb-3">
-                <img src={value.imageURL} alt="hjadshj" className=" catImg" style={styles.catImg}/>
-                <button className=" btnbutton btn-light w-75 text-center" style={styles.btnbutton}>{value.title}</button>
+                <img src='/images/2-2-360x400_t.jpg' alt="hjadshj" className=" catImg" style={styles.catImg}/>
+                <button className="btn btnbutton btn-light w-75 text-center" style={styles.btnbutton}>{value.title}</button>
               </div>
             </div>
           ))}
-         {/* </Slider> */}
+         </Slider>
       </div></div>
     </>
   );
