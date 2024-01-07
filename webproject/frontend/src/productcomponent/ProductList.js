@@ -9,7 +9,7 @@ import { HiMiniAdjustmentsVertical } from "react-icons/hi2";
 
 import { FaAngleRight,FaAngleLeft,FaEye  } from "react-icons/fa";
 import { CiShoppingBasket ,CiHeart } from "react-icons/ci";
-import '../productcomponent/slider.css'
+import './slider.css'
 
 function ProductList() {
 

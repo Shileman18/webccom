@@ -8,6 +8,10 @@ const categorySchema = new mongoose.Schema({
 
     index:true
   },
+  imageURL: {
+    type: String,
+    
+  },
 },
   {timestamps:true}
   );
