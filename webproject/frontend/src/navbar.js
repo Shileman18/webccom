@@ -9,12 +9,12 @@ import { Link } from "react-router-dom";
         <div className="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
           <ul className="navbar-nav ">
             <li className="nav-item">
-              <a className="nav-link active me-5 text-white" aria-current="page" href="/">
+              <a className="nav-link active me-5 " aria-current="page" href="/">
                 HOME
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link active  me-5 text-white" aria-current="page" href="/">
+              <a className="nav-link active  me-5 " aria-current="page" href="/">
                 SHOP
               </a>
             </li>
@@ -35,20 +35,20 @@ import { Link } from "react-router-dom";
             </NavDropdown>
             <li className="nav-item">
               <Link to='/contact'>
-              <a className="nav-link active me-5 text-white" aria-current="page" href="/">
+              <a className="nav-link active me-5 " aria-current="page" href="/">
                 CONTACT US
               </a></Link>
             </li>
             <li className="nav-item">
               <Link to='/features'>
-              <a className="nav-link active me-5 text-white" aria-current="page" href="/">
+              <a className="nav-link active me-5" aria-current="page" href="/">
                 FEATURES
               </a></Link>
             </li>
           </ul>
-          <ul  className="navbar-nav "  >
+          <ul  className="navbar-nav text-black"  >
            <li>
-           <img src="/images/per.jpg" alt="/" style={{ width: "60px" }} className="me-4 rounded "/>SPECIAL OFFERS
+           <img src="/images/per.jpg" alt="/" style={{ width: "60px" }} className="me-4 bg-primary"/>SPECIAL OFFERS
            </li>
           </ul>
         </div>

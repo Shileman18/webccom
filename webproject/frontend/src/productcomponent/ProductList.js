@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-// import './cartslider.css'
-// import './home.css'
-// import SubNav2 from '../navbar/secnavbar'
-// import Thirdbar from '../navbar/navbar'
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { FaRegStar } from "react-icons/fa";
+
 import { HiMiniAdjustmentsVertical } from "react-icons/hi2";
 
 import { FaEye  } from "react-icons/fa";
@@ -12,6 +13,16 @@ import { CiShoppingBasket ,CiHeart } from "react-icons/ci";
 import './slider.css'
 
 function ProductList() {
+    const settings = {
+        // dots: true,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        infinite: true,
+        // autoplay: true,
+        autoplaySpeed: 1000,
+      };
+    
 
 
     const [products, setproducts] = useState([]);
@@ -35,12 +46,14 @@ function ProductList() {
 
     return (
         <>
-            {/* <SubNav2 />
-            <Thirdbar /> */}
+           
             <div className='container'>
-                
+            <div className="d-flex">
+        <h3 className="col-3">LATEST PRODUCTS </h3>
+        <hr className="col-8 "/>
+        </div>
                     <div className="row">
-
+                    <Slider {...settings}>
                         {products.map((item, index) => (
 
 
@@ -49,9 +62,10 @@ function ProductList() {
 
                                     <Link to={`products/${item._id}`} style={{textDecoration:"none"}}>
                                         <img src={item.imageURL} alt={item.id} className='images' />
-                                        <div className='card-title' style={{ color: "black", textDecoration: "none" }}>
-                                            <div className='card-body'>
-                                                <h4 class="card-text text-truncate" style={{ color: "black", textDecoration: "none" }}>{item.title}</h4>
+                                        <div className='' style={{ color: "black", textDecoration: "none" }}>
+                                            <div className='text-center'>
+                                                <p className='text-warning'><FaRegStar/><FaRegStar/><FaRegStar/><FaRegStar/></p>
+                                                <h4 class=" text-truncate" style={{ color: "black", textDecoration: "none" }}>{item.title}</h4>
                                                 <div >
                                                     <p style={{ color: "black", textDecoration: "none" }}>price: $ {item.price}.00</p>
                                                 </div>
@@ -73,7 +87,7 @@ function ProductList() {
 
                         ))}
 
-                   
+</Slider>
 
                      
                     </div>

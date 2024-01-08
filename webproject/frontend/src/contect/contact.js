@@ -3,10 +3,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faMapMarker, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import './contact.css';
 import { Link } from 'react-router-dom';
+import Navbar1 from "../navbar1";
+import Navbar2 from "../navbar";
+import Shopeur from "../shopeur";
+import Footer from "../footer";
 const Contact = () => {
 
     return (
         <>
+        <Navbar1 />
+      <Shopeur />
+      <Navbar2 />
            
             <div className="container mt-4 mb-4">
                 <div className="row">
@@ -103,7 +110,7 @@ const Contact = () => {
 
 
                 </div>
-            </div>
+                <Footer />  </div>
         </>
     )
 }

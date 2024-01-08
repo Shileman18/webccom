@@ -1,9 +1,14 @@
 import React from 'react'
-
+import Navbar1 from "../navbar1";
+import Navbar2 from "../navbar";
+import Shopeur from "../shopeur";
+import Footer from "../footer";
 const Aboutus = () => {
     return (
         <div>
-            
+              <Navbar1 />
+      <Shopeur />
+      <Navbar2 />
             <section className="section">
                 <div className="container">
                     <div className="row align-items-center">
@@ -143,7 +148,7 @@ const Aboutus = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+                <Footer />  </section>
         </div>
     )
 }

@@ -10,9 +10,10 @@ import { IoDesktopSharp } from "react-icons/io5";
 import { IoMdMail } from "react-icons/io";
 
 const Navbar1 = () => {
+  
   return (
     <>
-    <div className='container-fluid bg-secondary '>
+    <div className='container-fluid  ' style={{backgroundColor:"#e1e2e9"}}>
     <Navbar collapseOnSelect expand="lg" className="">
 
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -25,7 +26,7 @@ const Navbar1 = () => {
           <Nav.Link href="#deets"><IoDesktopSharp className='fs-4'/> Desktop</Nav.Link>
           <Nav.Link href="#deets"><MdTabletMac className='fs-4'/> Tab</Nav.Link>
             <Nav.Link href="#deets"><MdOutlinePhoneIphone className='fs-4'/> Mobile</Nav.Link>
-            <Button variant=" " className='bg-info'>Buy Now</Button>
+            <Button variant=" " className='text-white'style={{backgroundColor:"darkblue"}}>Buy Now</Button>
           </Nav>
         </Navbar.Collapse>
     

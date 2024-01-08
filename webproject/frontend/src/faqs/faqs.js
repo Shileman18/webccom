@@ -1,7 +1,14 @@
 import React from 'react'
+import Navbar1 from "../navbar1";
+import Navbar2 from "../navbar";
+import Shopeur from "../shopeur";
+import Footer from "../footer";
 const Faq = () => {
     return (
-        <div>
+        <div>   <Navbar1 />
+        <Shopeur />
+        <Navbar2 />
+             
             
             <div className="container mt-5">
                 <div className="row justify-content-center">
@@ -309,7 +316,7 @@ const Faq = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+                <Footer />  </div>
 
           
         </div>

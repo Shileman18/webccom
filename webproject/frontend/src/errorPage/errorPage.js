@@ -1,8 +1,15 @@
 import React from 'react'
+import Navbar1 from "../navbar1";
+import Navbar2 from "../navbar";
+import Shopeur from "../shopeur";
+import Footer from "../footer";
 const Pageerror = () => {
     return (
         <div>
-          
+            <Navbar1 />
+      <Shopeur />
+      <Navbar2 />
+<div className='container'>
             <section className="bg-home d-flex align-items-center">
                 <div className="container">
                     <div className="row justify-content-center">
@@ -21,7 +28,9 @@ const Pageerror = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+                </section>
+                </div>
+                <Footer /> 
         </div>
     )
 }

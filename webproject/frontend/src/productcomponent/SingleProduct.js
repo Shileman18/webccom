@@ -47,7 +47,8 @@ console.log(product)
           <div className="col-lg-6 col-md-6 col-sm-12">
             <div className="card">
               <div className="card-body text-center">
-              <img src="/images/laptop/27-300x298.jpg" className="" alt="gggg" />
+              {/*"/images/laptop/27-300x298.jpg" */}
+              <img src={product.imageURL} className="" alt="gggg" />
               </div>
             </div>
           </div>

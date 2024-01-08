@@ -2,9 +2,16 @@
 import React from "react";
 import { Container, Row, Col, Dropdown } from "react-bootstrap";
 import { FaBars } from "react-icons/fa";
+import Navbar1 from "../navbar1";
+import Navbar2 from "../navbar";
+import Shopeur from "../shopeur";
+import Footer from "../footer";
 function Features() {
     return (
         <>
+        <Navbar1 />
+        <Shopeur />
+        <Navbar2 />
             <Container>
                 <Row>
                     <Col className="col-3">
@@ -66,7 +73,7 @@ function Features() {
                         </Row>
                     </Col>
                 </Row>
-            </Container>
+                <Footer /> </Container>
         </>
     );
 }

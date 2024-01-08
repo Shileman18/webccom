@@ -47,9 +47,9 @@ const Cart = ({ item }) => {
                     <p key={item.productId}></p>
                     <p>Product: {item.title}</p>
                     <hr />
-                    <p>price: {item.price}</p>
+                    <p>price: $ {item.price}.00</p>
                     <hr />
-                    <p>totalPrice: {item.totalPrice}</p>
+                    <p>totalPrice: $ {item.totalPrice}.00</p>
                     <hr />
 
                     <div className="d-flex justify-content-center">

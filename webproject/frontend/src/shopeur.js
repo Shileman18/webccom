@@ -52,23 +52,21 @@ const Shopeur = () => {
           </div>
 
           <div className="nav-link  d-flex align-items-center justify-content-center ">
-   
-              <VscAccount className=" fs-1  " />
-        
-       
+            <VscAccount className=" fs-2  " />
+
           
-              <p className="fs-5 ms-3"><Link to="/signin">sign in</Link></p>
-
-     
+              <Link to="/signin " style={{ textDecoration: "none", }} className="ms-2 fs-5 text-black">
+                Sign In
+              </Link>
+         
           </div>
-       
-          <div className="nav-link d-flex align-items-center justify-content-center">
-            <BsCart4 className="fs-1" />
 
-            <Link to="/cart" className="ms-3 fs-5">
+          <div className="nav-link d-flex align-items-center justify-content-center">
+            <BsCart4 className="fs-2" />
+
+            <Link to="/cart" style={{ textDecoration: "none"}}  className="ms-2 fs-5 text-black">
               My Cart
             </Link>
-
           </div>
           <div></div>
         </header>

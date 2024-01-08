@@ -1,10 +1,16 @@
 
 import React from 'react'
-
+import Navbar1 from "../navbar1";
+import Navbar2 from "../navbar";
+import Shopeur from "../shopeur";
+import Footer from "../footer";
 const Services = () => {
 
     return (
-        <div>
+        <div><Navbar1 />
+        <Shopeur />
+        <Navbar2 />
+             
           
             <div className="container">
                 <div className="row">
@@ -192,7 +198,7 @@ const Services = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+                <Footer /> </div>
         </div>
 
     )

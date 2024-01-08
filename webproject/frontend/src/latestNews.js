@@ -8,14 +8,15 @@ import "slick-carousel/slick/slick-theme.css";
 const LatestNews = () => {
   const [news, setNews] = useState([]);
   const settings = {
-    dots: true,
+    // dots: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 3 ,
     slidesToScroll: 1,
     infinite: true,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 1000,
   };
+
   useEffect(() => {
     const getNews = async () => {
       try {
@@ -38,34 +39,36 @@ const LatestNews = () => {
           <h4 className="col-3">LATEST NEWS </h4>
           <hr className="col-8 " />
         </div>
-        <Slider {...settings}>
-          {news.map((value, index) => (
-            <div key={index} className="">
-              <div className="card img-body me-3 mb-3" key={index}>
-                <img
-                  src="/images/electronic/9-490x280_t.jpg"
-                  alt=""
-                  className=""
-                />
+        <div className="row">
+          <Slider {...settings}>
+            {news.map((value, index) => (
+              <div key={index} className="me-3 ">
+             <div className="card me-4">
+                  <img src="/images/electronic/9-490x280_t.jpg" alt="" />
+              
+                <div className="card-body ">
+                  <h4 className="card-title text-truncate text-center">
+                    {value.title}
+                  </h4>
+
+                  <p className="card-text text-center text-truncate text-secondary">
+                    {value.description}
+                  </p>
+                  <p className="card-text text-center d-flex justify-content-around">
+                    <p className=" text-secondary">
+                      {" "}
+                      <IoPersonSharp className="fs-4" /> Admin
+                    </p>
+                    <p>
+                      Read More <FaLongArrowAltRight />
+                    </p>
+                  </p>
+                </div>
+                </div>
               </div>
-              <div className="card-body">
-                <h3 className="card-title text-center">{value.title}</h3>
-              </div>
-              <p className="card-text text-center  text-secondary">
-                {value.description}
-              </p>
-              <p className="card-text text-center d-flex justify-content-around">
-                <p className=" text-secondary">
-                  {" "}
-                  <IoPersonSharp className="fs-4" /> Admin
-                </p>
-                <p>
-                  Read More <FaLongArrowAltRight />
-                </p>
-              </p>
-            </div>
-          ))}
-        </Slider>
+            ))}
+          </Slider>
+        </div>
       </div>
     </>
   );

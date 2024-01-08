@@ -34,4 +34,3 @@ function Home() {
 }
 
 export default Home;
-// https://www.lg.com/nz/images/tvs/md06109716/gallery/1100_3.jpg
